@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "./pb";
+package math;
+
+service Oracle {
+  rpc CalculateAcceleration (ComputeRequest) returns (ComputeResponse);
+}
+
+message ComputeRequest {
+  repeated float x = 1;
+  repeated float y = 2;
+  repeated float z = 3;
+  repeated float field_x = 4;
+  repeated float field_y = 5;
+  repeated float field_z = 6;
+  repeated float field_amplitude = 7;
+  repeated float field_sigma = 8;
+  repeated float mass = 9;
+}
+
+message ComputeResponse {
+  repeated float ax = 1;
+  repeated float ay = 2;
+  repeated float az = 3;
+}
