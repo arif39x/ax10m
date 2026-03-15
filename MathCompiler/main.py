@@ -2,6 +2,7 @@ import re
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import sympy as sp
+from ast_firewall import validate_equation
 
 app = FastAPI()
 
@@ -25,6 +26,7 @@ def to_wgsl(expr) -> str:
 @app.post("/compile_sdf")
 async def compile_sdf(req: EquationRequest):
     try:
+        validate_equation(req.equation)
         eq_str = req.equation.replace('state.x', 'state_x').replace('state.y', 'state_y').replace('state.z', 'state_z')
         expr = sp.sympify(eq_str, locals=ALLOWED_VARS)
         
