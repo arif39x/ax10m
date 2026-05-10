@@ -1,4 +1,4 @@
-module state_spire
+module rationalist-server
 
 go 1.26.1
 

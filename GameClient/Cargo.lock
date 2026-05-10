@@ -1770,6 +1770,26 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca45419789ae5a7899559e9512e58ca889e41f04f1f2445e9f4b290ceccd1d08"
 
 [[package]]
+name = "rationalist_client"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "egui",
+ "egui-wgpu",
+ "egui-winit",
+ "env_logger",
+ "futures-util",
+ "log",
+ "pollster",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tokio-tungstenite",
+ "wgpu",
+ "winit",
+]
+
+[[package]]
 name = "raw-window-handle"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1836,26 +1856,6 @@ name = "regex-syntax"
 version = "0.8.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
-
-[[package]]
-name = "render_conduit"
-version = "0.1.0"
-dependencies = [
- "bytemuck",
- "egui",
- "egui-wgpu",
- "egui-winit",
- "env_logger",
- "futures-util",
- "log",
- "pollster",
- "serde",
- "serde_json",
- "tokio",
- "tokio-tungstenite",
- "wgpu",
- "winit",
-]
 
 [[package]]
 name = "renderdoc-sys"

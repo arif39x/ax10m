@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo "Starting axiomMP Microservices..."
+echo "Starting Rationalist Microservices..."
 
 echo "Booting MathCompiler (Python)..."
 cd MathCompiler
@@ -11,12 +11,6 @@ PID_MATH=$!
 cd ..
 
 sleep 1
-
-echo "Booting PhysicsEngine (Julia)..."
-julia --project=PhysicsEngine PhysicsEngine/server.jl &
-PID_PHYSICS=$!
-
-sleep 5
 
 echo "Booting GameServer (Go)..."
 cd GameServer
@@ -33,7 +27,6 @@ cargo run --release
 
 echo "Shutting down the universe..."
 kill $PID_MATH
-kill $PID_PHYSICS
 kill $PID_SERVER
 
-echo "axiomMP Offline."
+echo "Rationalist Offline."

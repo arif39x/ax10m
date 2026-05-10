@@ -1,24 +1,20 @@
+# System
 .DS_Store
-Thumbs.db
 .vscode/
 .idea/
-*.swp
-*.swo
+
+# Rust
 /GameClient/target/
-**/*.rs.bk
-Cargo.lock.bk
+
+# Go
 /GameServer/main
 /GameServer/main.exe
-*.test
+
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
 venv/
 .venv/
-env/
+.pytest_cache/
+
+# Environment
 .env
-*.jl.cov
-*.jl.teletape
-*.jl.hprof
-*.jl.profile
-*.mem
